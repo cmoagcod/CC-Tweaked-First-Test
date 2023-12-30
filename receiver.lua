@@ -54,7 +54,6 @@ function Quarry(hauteur, largeur, longueur)
             local i3 = 0
             Tourne("tourneDroite")
             Tourne("tourneDroite")
-            Tourne("tourneDroite")
             while i3 < longueur do
                 i3 = i3 + 1
                 Bouge("avant")
