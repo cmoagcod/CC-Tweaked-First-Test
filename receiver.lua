@@ -1,15 +1,12 @@
 -- configurations
 print("Modem Position: ")
---ModemPos = tostring(read())
-ModemPos = "left"
+ModemPos = tostring(read())
 
 print("Controller Protocol: ")
--- Protocol = read()
-Protocol = "quarry"
+Protocol = read()
 
 print("Controller ID: ")
---Id = tonumber(read())
-Id = 0
+Id = tonumber(read())
 
 function Quarry(size)
     size = tonumber(size)
