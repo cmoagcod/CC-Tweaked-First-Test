@@ -60,7 +60,10 @@ function Quarry(hauteur, largeur, longueur)
                 Bouge("avant")
             end
         else
-            Tourne("tourneDroite")
+            Tourne("tourneGauche")
+            Tourne("tourneGauche")
+            Tourne("tourneGauche")
+            Tourne("tourneGauche")
         end
 
         Tourne("tourneDroite")
