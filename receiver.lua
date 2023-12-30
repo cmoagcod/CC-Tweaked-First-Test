@@ -52,8 +52,8 @@ function Quarry(hauteur, largeur, longueur)
 
         if i0 % 2 == 0 then
             local i3 = 0
-            Tourne("tourneGauche")
-            Tourne("tourneGauche")
+            Tourne("tourneDroite")
+            Tourne("tourneDroite")
             while i3 < longueur do
                 i3 = i3 + 1
                 Bouge("avant")
