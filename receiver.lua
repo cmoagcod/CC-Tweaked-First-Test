@@ -11,74 +11,9 @@ print("Controller ID: ")
 --Id = tonumber(read())
 Id = 0
 
-function Quarry(hauteur, largeur, longueur)
-    hauteur = tonumber(hauteur)
-    largeur = tonumber(largeur)
-    longueur = tonumber(longueur)-1
-    local i2 = 0
-
-    turtle.refuel()
-
-    if turtle.detectDown then
-        turtle.digDown()
-    end
-    if turtle.detectUp then
-        turtle.digUp()
-    end
-
-    while i2 < hauteur do
-        i2 = i2 + 1
-        local i0 = 0
-
-        while i0 < largeur do
-            i0 = i0 + 1
-            local i1 = 0
-    
-            while i1 < longueur do
-                i1 = i1 + 1
-                MineBougeH3("mineBougeH3Avant")
-            end
-    
-            if i0 % 2 == 0 then
-                Tourne("tourneDroite")
-                MineBougeH3("mineBougeH3Avant")
-                Tourne("tourneDroite")
-            else
-                Tourne("tourneGauche")
-                MineBougeH3("mineBougeH3Avant")
-                Tourne("tourneGauche")
-            end
-        end
-
-        if i0 % 2 > 0 then
-            local i3 = 0
-            
-            while i3 < longueur do
-                i3 = i3 + 1
-                Bouge("avant")
-            end
-        else
-            
-        end
-
-        Tourne("tourneDroite")
-
-        local i4 = 0
-
-        while i4 < largeur do
-            i4 = i4 + 1
-            Bouge("avant")
-        end
-
-        Tourne("tourneDroite")
-
-        MineBouge("bougeMineBas")
-        MineBouge("bougeMineBas")
-
-        Tourne("tourneDroite")
-
-    end
-    
+function Quarry(size)
+    size = tonumber(size)
+    shell.run("excavate ",size)
 end
 
 function Fuel(parameter)
@@ -251,7 +186,7 @@ while exitCode == 0 do
         end
 
         if message == "quarry" then
-            Quarry(4,4,4)
+            Quarry(4)
         end
 
     end
