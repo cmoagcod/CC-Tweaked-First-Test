@@ -186,7 +186,7 @@ while exitCode == 0 do
         end
 
         if message == "quarry" then
-            Quarry(4)
+            Quarry(16)
         end
 
     end
